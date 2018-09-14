@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>API Docs | Aviator</title>
+<meta name="generator" content="Jekyll v3.7.2" />
+<meta property="og:title" content="API Docs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Jekyll template for API documentation." />
+<meta property="og:description" content="Jekyll template for API documentation." />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Aviator" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/","description":"Jekyll template for API documentation.","name":"Aviator","@type":"WebSite","headline":"API Docs","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="icon" type="image/png" href="/favicon.png">
+
+		
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="/js/main.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>
+				<button type="button" class="open-nav" id="open-nav"></button>
+				<a href="/"><img src="/images/logo.svg" height="40" alt="Aviator logo"></a>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search">
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<div id="sidebar" class="sidebar">
+	
+	
+		
+	
+		
+			<section>
+				<h6>Documentation</h6>
+				<ul>
+					
+					
+						<li>
+							<a href="#documentationgetting_started">
+								Getting Started
+								
+							</a>
+						</li>
+					
+						<li>
+							<a href="#documentationauthentication">
+								Authentication
+								
+							</a>
+						</li>
+					
+						<li>
+							<a href="#documentationerrors">
+								Errors
+								
+							</a>
+						</li>
+					
+				</ul>
+			</section>
+		
+	
+		
+			<section>
+				<h6>APIs</h6>
+				<ul>
+					
+					
+						<li>
+							<a href="#apistitching_using_v1_start_encode2">
+								Stitching videos with /v1/start_encode2
+								<span class="endpoint GET"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#apicreating_transcoding_task">
+								Creating Transcoding Task
+								<span class="endpoint GET"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#apigenerating_thumbnails">
+								Generating Thumbnails
+								<span class="endpoint GET"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#apigetting_access_token">
+								Getting Access Token
+								<span class="endpoint GET"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#apigetting_transcoding_task_status">
+								Getting Transcoding Task Status
+								<span class="endpoint GET"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#apiinterval_based_thumbnails_with_WebVTT_file">
+								Interval-based Thumbnails
+								<span class="endpoint GET"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#apistarting_transcoding_process">
+								Starting Transcoding Process
+								<span class="endpoint GET"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#apistarting_transcoding_process_with_custom_params">
+								Starting Transcoding Process with Custom Params
+								<span class="endpoint GET"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#apistitching_using_v1_start_encode">
+								Stitching videos with /v1/start_encode
+								<span class="endpoint GET"></span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="#apiadding_logo_watermark_to_output_video">
+								Adding logo/watermark
+								<span class="endpoint GET"></span>
+							</a>
+						</li>
+					
+				</ul>
+			</section>
+		
+	
+</div>
+
+
+			<p class="copyright">
+				<a href="https://cloudcannon.com/">
+					Template by CloudCannon
+				</a>
+			</p>
+		</header>
+		<div class="main">
+			
+
+	
+	
+
+	
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="documentationgetting_started">
+						Getting Started
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_documentation/getting_started.md">Edit</a>
+				</h3>
+				
+
+				
+
+				<p>Welcome to our API.</p>
+
+<p>This API document is designed for those interested in developing for our platform.</p>
+
+<p>This API is still under development and will evolve.</p>
+
+<p class="success">You’ll succeed if you do this.</p>
+
+<p class="info">Here’s some useful information.</p>
+
+<p class="warning">Something may not happen if you try and do this.</p>
+
+<p class="error">Something bad will happen if you do this.</p>
+
+
+				
+			</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="documentationauthentication">
+						Authentication
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_documentation/authentication.md">Edit</a>
+				</h3>
+				
+
+				
+
+				<p>You need to be authenticated for all API requests. You can generate an API key in your developer dashboard.</p>
+
+<p>Add the API key to all requests as a GET parameter.</p>
+
+<p class="error">Nothing will work unless you include this API key</p>
+
+
+				
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="JQuery" class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">$</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s2">"http://api.myapp.com/books/"</span><span class="p">,</span> <span class="p">{</span> <span class="s2">"token"</span><span class="p">:</span> <span class="s2">"YOUR_APP_KEY"</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+ <span class="p">});</span>
+</code></pre></div></div>
+
+						
+								
+
+
+<div title="Curl" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> curl http://api.myapp.com/books?token<span class="o">=</span>YOUR_APP_KEY
+</code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="documentationerrors">
+						Errors
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_documentation/errors.md">Edit</a>
+				</h3>
+				
+
+				
+
+				<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>OK</td>
+      <td>Success</td>
+    </tr>
+    <tr>
+      <td>201</td>
+      <td>Created</td>
+      <td>Creation Successful</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>Bad Request</td>
+      <td>We could not process that action</td>
+    </tr>
+    <tr>
+      <td>403</td>
+      <td>Forbidden</td>
+      <td>We couldn’t authenticate you</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>All errors will return JSON in the following format:</p>
+
+
+				
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error message here"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+								
+						
+			</section>
+			
+		</section>
+	
+
+	
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apistitching_using_v1_start_encode2">
+						Stitching videos with /v1/start_encode2
+						
+							<span class="endpoint GET"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/stitching_using_v1_start_encode2.md">Edit</a>
+				</h3>
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+										<dt>access token</dt>
+										<dd>your token</dd>
+								
+						</dl>
+				
+
+				<p>This route is for stitching videos using /v1/start_encode2</p>
+
+
+				
+						
+								
+
+
+<div title="CURL" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">curl</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//api.qencode.com/v</span><span class="mi">1</span><span class="err">/start_encode</span><span class="mi">2</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">task_token=b</span><span class="mi">49e034</span><span class="err">d</span><span class="mi">198262</span><span class="err">f</span><span class="mi">1</span><span class="err">d</span><span class="mi">5</span><span class="err">d</span><span class="mi">15</span><span class="err">ed</span><span class="mi">9</span><span class="err">f</span><span class="mi">3</span><span class="err">cb</span><span class="mi">8</span><span class="err">ee</span><span class="mi">1</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">query='</span><span class="p">{</span><span class="s2">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"stitch"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="s2">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://nyc3.digitaloceanspaces.com/qencode2/stitching/batch3/A4070002.mp4"</span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="s2">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://nyc3.digitaloceanspaces.com/qencode2/stitching/batch3/A4070003.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"120.0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"60.57"</span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"output"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"s3://s3-eu-west-2.amazonaws.com/qencode-test/stitch/4_clip.mp4"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"AKIAIKZIPSJ7SDAIWK4A"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"secret"</span><span class="p">:</span><span class="s2">"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"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public-read"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"file_extension"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"640x360"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"baseline"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"41"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"error"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"upload_url"</span><span class="p">:</span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">storage.qencode.com</span><span class="se">\/</span><span class="s2">v1</span><span class="se">\/</span><span class="s2">upload_file"</span><span class="p">,</span><span class="s2">"task_token"</span><span class="p">:</span><span class="s2">"471272a512d76c22665db9dcee893409"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apicreating_transcoding_task">
+						Creating Transcoding Task
+						
+							<span class="endpoint GET"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/creating_transcoding_task.md">Edit</a>
+				</h3>
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+										<dt>access token</dt>
+										<dd>your token</dd>
+								
+						</dl>
+				
+
+				<p>This route is for creating a transcoding task.</p>
+
+
+				
+						
+								
+
+
+<div title="CURL" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">curl</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//api.qencode.com/v</span><span class="mi">1</span><span class="err">/create_task</span><span class="w"> </span><span class="err">-d</span><span class="w"> </span><span class="err">token=</span><span class="mi">76682314</span><span class="err">a</span><span class="mi">86</span><span class="err">ed</span><span class="mi">377730873394</span><span class="err">f</span><span class="mi">8172</span><span class="err">f</span><span class="mi">2</span><span class="w"> 
+</span></code></pre></div></div>
+
+								
+								
+
+
+<div title="Postman" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span></code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"error"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"upload_url"</span><span class="p">:</span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">storage.qencode.com</span><span class="se">\/</span><span class="s2">v1</span><span class="se">\/</span><span class="s2">upload_file"</span><span class="p">,</span><span class="s2">"task_token"</span><span class="p">:</span><span class="s2">"471272a512d76c22665db9dcee893409"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apigenerating_thumbnails">
+						Generating Thumbnails
+						
+							<span class="endpoint GET"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/generating_thumbnails.md">Edit</a>
+				</h3>
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+										<dt>access token</dt>
+										<dd>your token</dd>
+								
+						</dl>
+				
+
+				<p>This route is for generating thumbnails.</p>
+
+<p class="info">There are two ways of thumbnails creation with Qencode API:</p>
+<ul>
+  <li>
+    <p>You can generate individual thumbnails at specified moments of a video (specified in % of video length).</p>
+  </li>
+  <li>
+    <p>You can create thumbnails for the whole video basing on an interval value between each thumbnail specified in seconds. When using this way a WebVTT file can be also seamlessly generated. WebVTT (https://www.w3.org/TR/webvtt1/) is a standard many players support to display thumbnails in a tooltip when a viewer hovers the control bar.</p>
+  </li>
+</ul>
+
+<p>Individual thumbnails</p>
+
+
+				
+						
+								
+
+
+<div title="Example" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"output"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thumbnail"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"920"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"height"</span><span class="p">:</span><span class="w"> </span><span class="s2">"500"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15_920x500"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+								
+								
+
+
+<div title="CURL" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">curl</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//api.qencode.com/v</span><span class="mi">1</span><span class="err">/start_encode</span><span class="mi">2</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">task_token=b</span><span class="mi">49e034</span><span class="err">d</span><span class="mi">198262</span><span class="err">f</span><span class="mi">1</span><span class="err">d</span><span class="mi">5</span><span class="err">d</span><span class="mi">15</span><span class="err">ed</span><span class="mi">9</span><span class="err">f</span><span class="mi">3</span><span class="err">cb</span><span class="mi">8</span><span class="err">ee</span><span class="mi">1</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">query='</span><span class="p">{</span><span class="s2">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qa.qencode.com/static/test_mini.mp4"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+       </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"output"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"s3://nyc3.digitaloceanspaces.com/qencode3/test/test_mini.mp4"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"secret"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public-read"</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+               </span><span class="s2">"framerate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29.97"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"keyframe"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"file_extension"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"360x240"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20"</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="p">{</span><span class="w">
+               </span><span class="s2">"output"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thumbnail"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.15"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"320"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"height"</span><span class="p">:</span><span class="w"> </span><span class="s2">"240"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                 </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"s3://nyc3.digitaloceanspaces.com/qencode3/test/thumb/15_320x240.png"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"secret"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public-read"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+               </span><span class="s2">"user_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15_320x240"</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+             </span><span class="p">{</span><span class="w">
+               </span><span class="s2">"output"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thumbnail"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.50"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"width"</span><span class="p">:</span><span class="w"> </span><span class="s2">"320"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"height"</span><span class="p">:</span><span class="w"> </span><span class="s2">"240"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                 </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"s3://nyc3.digitaloceanspaces.com/qencode3/test/thumb/50_320x240.png"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"secret"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public-read"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+               </span><span class="s2">"user_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50_320x240"</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"error"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"upload_url"</span><span class="p">:</span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">storage.qencode.com</span><span class="se">\/</span><span class="s2">v1</span><span class="se">\/</span><span class="s2">upload_file"</span><span class="p">,</span><span class="s2">"task_token"</span><span class="p">:</span><span class="s2">"471272a512d76c22665db9dcee893409"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apigetting_access_token">
+						Getting Access Token
+						
+							<span class="endpoint GET"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/getting_access_token.md">Edit</a>
+				</h3>
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+										<dt>access token</dt>
+										<dd>your token</dd>
+								
+						</dl>
+				
+
+				<p>This route is for getting the access token.</p>
+
+
+				
+						
+								
+
+
+<div title="CURL" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">curl</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//api.qencode.com/v</span><span class="mi">1</span><span class="err">/access_token</span><span class="w"> </span><span class="err">-d</span><span class="w"> </span><span class="err">api_key=</span><span class="mi">5</span><span class="err">a</span><span class="mi">2</span><span class="err">a</span><span class="mi">846</span><span class="err">a</span><span class="mi">26</span><span class="err">ace</span><span class="w"> 
+</span></code></pre></div></div>
+
+								
+								
+
+
+<div title="Postman" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span></code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"error"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"token"</span><span class="p">:</span><span class="s2">"1e1111fec48cc52060ca27312ed983ce"</span><span class="p">,</span><span class="s2">"expire"</span><span class="p">:</span><span class="s2">"2018-09-03T14:01:56"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apigetting_transcoding_task_status">
+						Getting Transcoding Task Status
+						
+							<span class="endpoint GET"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/getting_transcoding_task_status.md">Edit</a>
+				</h3>
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+										<dt>access token</dt>
+										<dd>your token</dd>
+								
+						</dl>
+				
+
+				<p>This route is for inquiring a transcoding task status.</p>
+
+
+				
+						
+								
+
+
+<div title="CURL 1" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="err">curl</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//api.qencode.com/v</span><span class="mi">1</span><span class="err">/status</span><span class="w"> </span><span class="err">-d</span><span class="w"> </span><span class="err">task_tokens=</span><span class="mi">63</span><span class="err">adfb</span><span class="mi">01</span><span class="err">d</span><span class="mi">408081</span><span class="err">b</span><span class="mi">10440682</span><span class="err">f</span><span class="mi">3</span><span class="err">a</span><span class="mi">64114</span><span class="w">
+</span></code></pre></div></div>
+
+								
+								
+
+
+<div title="CURL 2" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">curl</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//master</span><span class="mi">-79109168</span><span class="err">ae</span><span class="mi">0711e8</span><span class="err">b</span><span class="mi">00</span><span class="err">baa</span><span class="mi">831</span><span class="err">f</span><span class="mi">35</span><span class="err">b</span><span class="mi">3</span><span class="err">f</span><span class="mi">7</span><span class="err">.qencode.com/v</span><span class="mi">1</span><span class="err">/status</span><span class="w"> </span><span class="err">-d</span><span class="w"> </span><span class="err">task_tokens=d</span><span class="mi">4936</span><span class="err">f</span><span class="mi">71</span><span class="err">a</span><span class="mi">242</span><span class="err">d</span><span class="mi">4</span><span class="err">b</span><span class="mi">61</span><span class="err">d</span><span class="mi">790</span><span class="err">efa</span><span class="mi">217</span><span class="err">ff</span><span class="mi">9</span><span class="err">d</span><span class="mi">5</span><span class="w">
+</span></code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response 1" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"error"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"statuses"</span><span class="p">:{</span><span class="s2">"d4936f71a242d4b61d790efa217ff9d5"</span><span class="p">:{</span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"downloading"</span><span class="p">,</span><span class="s2">"percent"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"error"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"error_description"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="s2">"images"</span><span class="p">:[],</span><span class="s2">"videos"</span><span class="p">:[],</span><span class="s2">"status_url"</span><span class="p">:</span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">master-79109168ae0711e8b00baa831f35b3f7.qencode.com</span><span class="se">\/</span><span class="s2">v1</span><span class="se">\/</span><span class="s2">status"</span><span class="p">}}}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Response 2" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"statuses"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"d4936f71a242d4b61d790efa217ff9d5"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"encoding"</span><span class="p">,</span><span class="w"> </span><span class="s2">"percent"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.3743842364532011</span><span class="p">,</span><span class="w"> </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">}},</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">}</span><span class="w">
+
+</span><span class="p">{</span><span class="s2">"statuses"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"d4936f71a242d4b61d790efa217ff9d5"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"encoding"</span><span class="p">,</span><span class="w"> </span><span class="s2">"percent"</span><span class="p">:</span><span class="w"> </span><span class="mf">68.965517241379317</span><span class="p">,</span><span class="w"> </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a2a846a26e88"</span><span class="p">,</span><span class="w"> </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://nyc3.digitaloceanspaces.com/qencode3/videos/240/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video-0-0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"storage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bucket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qencode3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nyc3.digitaloceanspaces.com"</span><span class="p">,</span><span class="w"> </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"videos/240/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w"> </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"custom_s3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">},</span><span class="w"> </span><span class="s2">"user_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"240p"</span><span class="p">}],</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">}},</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">}</span><span class="w">
+
+</span><span class="p">{</span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"completed"</span><span class="p">,</span><span class="w"> </span><span class="s2">"percent"</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span><span class="w"> </span><span class="s2">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a2a846a26e88"</span><span class="p">,</span><span class="w"> </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://nyc3.digitaloceanspaces.com/qencode3/videos/240/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video-0-0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"storage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bucket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qencode3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nyc3.digitaloceanspaces.com"</span><span class="p">,</span><span class="w"> </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"videos/240/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w"> </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"custom_s3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">},</span><span class="w"> </span><span class="s2">"user_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"240p"</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a2a846a26e88"</span><span class="p">,</span><span class="w"> </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://nyc3.digitaloceanspaces.com/qencode3/videos/720/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video-2-0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"storage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bucket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qencode3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nyc3.digitaloceanspaces.com"</span><span class="p">,</span><span class="w"> </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"videos/720/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w"> </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"custom_s3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">},</span><span class="w"> </span><span class="s2">"user_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"720p"</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a2a846a26e88"</span><span class="p">,</span><span class="w"> </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://nyc3.digitaloceanspaces.com/qencode3/output/360/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video-4-0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"storage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bucket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qencode3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nyc3.digitaloceanspaces.com"</span><span class="p">,</span><span class="w"> </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"output/360/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w"> </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"custom_s3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">},</span><span class="w"> </span><span class="s2">"user_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"360p"</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a2a846a28604"</span><span class="p">,</span><span class="w"> </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://nyc3.digitaloceanspaces.com/qencode3/hls/498afa68af0711e8b9c60a443ab347fd/playlist.m3u8"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video-5-1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"storage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hls"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bucket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qencode3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nyc3.digitaloceanspaces.com"</span><span class="p">,</span><span class="w"> </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/hls/498afa68af0711e8b9c60a443ab347fd"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w"> </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"custom_s3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">},</span><span class="w"> </span><span class="s2">"user_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"360p"</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a2a846a28604"</span><span class="p">,</span><span class="w"> </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://nyc3.digitaloceanspaces.com/qencode3/hls/498afa68af0711e8b9c60a443ab347fd/playlist.m3u8"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video-5-0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"storage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hls"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bucket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qencode3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nyc3.digitaloceanspaces.com"</span><span class="p">,</span><span class="w"> </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/hls/498afa68af0711e8b9c60a443ab347fd"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w"> </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"custom_s3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">},</span><span class="w"> </span><span class="s2">"user_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"240p"</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a2a846a26e88"</span><span class="p">,</span><span class="w"> </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://nyc3.digitaloceanspaces.com/qencode3/output/480/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video-3-0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"storage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bucket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qencode3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nyc3.digitaloceanspaces.com"</span><span class="p">,</span><span class="w"> </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"output/480/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w"> </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"custom_s3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">},</span><span class="w"> </span><span class="s2">"user_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"480p"</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a2a846a26e88"</span><span class="p">,</span><span class="w"> </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://nyc3.digitaloceanspaces.com/qencode3/videos/1080/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video-1-0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"storage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bucket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qencode3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nyc3.digitaloceanspaces.com"</span><span class="p">,</span><span class="w"> </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"videos/1080/498afa68af0711e8b9c60a443ab347fd.mp4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scheme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w"> </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"custom_s3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">},</span><span class="w"> </span><span class="s2">"user_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1080p"</span><span class="p">}],</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">}},</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apiinterval_based_thumbnails_with_WebVTT_file">
+						Interval-based Thumbnails
+						
+							<span class="endpoint GET"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/interval_based_thumbnails_with_WebVTT_file.md">Edit</a>
+				</h3>
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+										<dt>access token</dt>
+										<dd>your token</dd>
+								
+						</dl>
+				
+
+				<p>Example below specifies creation of 320x240 size thumbnails at each 30 seconds of a video.
+Thumbnails and WebVTT file will be saved into the folder specified in “url” attribute of “destination” object.</p>
+
+
+				
+						
+								
+
+
+<div title="Example" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"output"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"thumbnails"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"s3://nyc3.digitaloceanspaces.com/qencode3/test/thumb/bbb/"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"secret"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public-read"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"width"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"height"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+								
+								
+
+
+<div title="CURL" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">curl</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//api.qencode.com/v</span><span class="mi">1</span><span class="err">/start_encode</span><span class="mi">2</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">task_token=b</span><span class="mi">49e034</span><span class="err">d</span><span class="mi">198262</span><span class="err">f</span><span class="mi">1</span><span class="err">d</span><span class="mi">5</span><span class="err">d</span><span class="mi">15</span><span class="err">ed</span><span class="mi">9</span><span class="err">f</span><span class="mi">3</span><span class="err">cb</span><span class="mi">8</span><span class="err">ee</span><span class="mi">1</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">query='</span><span class="p">{</span><span class="s2">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://nyc3.digitaloceanspaces.com/qencode/bbb_sunflower_1080p_60fps_normal_339mb.mp4"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"output"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"s3://nyc3.digitaloceanspaces.com/qencode3/test/bbb.mp4"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"secret"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public-read"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"file_extension"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"320x240"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+         </span><span class="s2">"output"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"thumbnails"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"s3://nyc3.digitaloceanspaces.com/qencode3/test/thumb/bbb/"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"secret"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public-read"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"width"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"height"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w"> 
+</span></code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"error"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"upload_url"</span><span class="p">:</span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">storage.qencode.com</span><span class="se">\/</span><span class="s2">v1</span><span class="se">\/</span><span class="s2">upload_file"</span><span class="p">,</span><span class="s2">"task_token"</span><span class="p">:</span><span class="s2">"471272a512d76c22665db9dcee893409"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apistarting_transcoding_process">
+						Starting Transcoding Process
+						
+							<span class="endpoint GET"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/starting_transcoding_process.md">Edit</a>
+				</h3>
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+										<dt>access token</dt>
+										<dd>your token</dd>
+								
+						</dl>
+				
+
+				<p>This route is for starting the transcoding process.</p>
+
+
+				
+						
+								
+
+
+<div title="CURL" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">curl</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//api.qencode.com/v</span><span class="mi">1</span><span class="err">/start_encode</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">task_token=</span><span class="mi">63</span><span class="err">adfb</span><span class="mi">01</span><span class="err">d</span><span class="mi">408081</span><span class="err">b</span><span class="mi">10440682</span><span class="err">f</span><span class="mi">3</span><span class="err">a</span><span class="mi">64114</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">uri=</span><span class="s2">"https://qa.qencode.com/static/test_mini.mp4"</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">start_time=</span><span class="mi">10</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">duration=</span><span class="mi">20</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">profiles=</span><span class="mi">5</span><span class="err">a</span><span class="mi">2</span><span class="err">a</span><span class="mi">846</span><span class="err">a</span><span class="mi">26e88</span><span class="p">,</span><span class="mi">5</span><span class="err">a</span><span class="mi">2</span><span class="err">a</span><span class="mi">846</span><span class="err">a</span><span class="mi">28604</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">transfer_method=</span><span class="mi">5</span><span class="err">aa</span><span class="mi">2875489681</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">payload=</span><span class="s2">"12345"</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">output_path_variables='</span><span class="p">{</span><span class="s2">"category"</span><span class="p">:</span><span class="s2">"test_videos"</span><span class="p">,</span><span class="s2">"video_name"</span><span class="p">:</span><span class="s2">"12345"</span><span class="p">}</span><span class="err">'</span><span class="w">
+</span></code></pre></div></div>
+
+								
+								
+
+
+<div title="Postman" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span></code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"error"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"status_url"</span><span class="p">:</span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">api.qencode.com</span><span class="se">\/</span><span class="s2">v1</span><span class="se">\/</span><span class="s2">status"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apistarting_transcoding_process_with_custom_params">
+						Starting Transcoding Process with Custom Params
+						
+							<span class="endpoint GET"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/starting_transcoding_process_with_custom_params.md">Edit</a>
+				</h3>
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+										<dt>access token</dt>
+										<dd>your token</dd>
+								
+						</dl>
+				
+
+				<p>This route is for starting transcoding process with custom parameters.</p>
+
+
+				
+						
+								
+
+
+<div title="CURL" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">curl</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//api.qencode.com/v</span><span class="mi">1</span><span class="err">/start_encode</span><span class="mi">2</span><span class="w"> </span><span class="err">\</span><span class="w">
+   </span><span class="err">-d</span><span class="w"> </span><span class="err">task_token=b</span><span class="mi">49e034</span><span class="err">d</span><span class="mi">198262</span><span class="err">f</span><span class="mi">1</span><span class="err">d</span><span class="mi">5</span><span class="err">d</span><span class="mi">15</span><span class="err">ed</span><span class="mi">9</span><span class="err">f</span><span class="mi">3</span><span class="err">cb</span><span class="mi">8</span><span class="err">ee</span><span class="mi">1</span><span class="w"> </span><span class="err">\</span><span class="w">
+   </span><span class="err">-d</span><span class="w"> </span><span class="err">payload=</span><span class="s2">"12345"</span><span class="w"> </span><span class="err">\</span><span class="w">
+   </span><span class="err">-d</span><span class="w"> </span><span class="err">query='</span><span class="p">{</span><span class="s2">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+   </span><span class="s2">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qa.qencode.com/static/test_mini.mp4"</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+       </span><span class="s2">"output"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"s3://nyc3.digitaloceanspaces.com/qencode3/test/test_mini.mp4"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"secret"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public-read"</span><span class="w">
+       </span><span class="p">},</span><span class="w">
+             </span><span class="s2">"framerate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29.97"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"keyframe"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"file_extension"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"360x240"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"video_codec_parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+               </span><span class="s2">"vprofile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"baseline"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"coder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"flags2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-bpyramid+fastpskip-dct8x8"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"partitions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+parti8x8+parti4x4+partp8x8+partb8x8"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"directpred"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"me_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hex"</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="s2">"start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"audio_bitrate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"64"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"audio_sample_rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"44100"</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"audio_channels_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
+           </span><span class="p">}</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+       </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+								
+								
+
+
+<div title="Postman" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span></code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"error"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"status_url"</span><span class="p">:</span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">api.qencode.com</span><span class="se">\/</span><span class="s2">v1</span><span class="se">\/</span><span class="s2">status"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apistitching_using_v1_start_encode">
+						Stitching videos with /v1/start_encode
+						
+							<span class="endpoint GET"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/stitching_using_v1_start_encode.md">Edit</a>
+				</h3>
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+										<dt>access token</dt>
+										<dd>your token</dd>
+								
+						</dl>
+				
+
+				<p>This route is for stitching videos using /v1/start_encode</p>
+
+<p class="info">Key thing is using “stitch” param for /v1/start_encode method instead of “uri” and instead of “source” query attribute for /v1/start_encode2 method.
+Same format of JSON array is used for both methods. You can specify just urls to input videos as stitch array elements:</p>
+
+
+				
+						
+								
+
+
+<div title="Example with URLs" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"output"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"thumbnails"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"s3://nyc3.digitaloceanspaces.com/qencode3/test/thumb/bbb/"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"secret"</span><span class="p">:</span><span class="s2">"abcde12345"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public-read"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"width"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"height"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+								
+								
+
+
+<div title="Example with Object Format" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="s2">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://yourserver.com/video1.mp4"</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://yourserver.com/video2.mp4"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"120.0"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"60.57"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+								
+								
+
+
+<div title="CURL" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">curl</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//api.qencode.com/v</span><span class="mi">1</span><span class="err">/start_encode</span><span class="mi">2</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">task_token=b</span><span class="mi">49e034</span><span class="err">d</span><span class="mi">198262</span><span class="err">f</span><span class="mi">1</span><span class="err">d</span><span class="mi">5</span><span class="err">d</span><span class="mi">15</span><span class="err">ed</span><span class="mi">9</span><span class="err">f</span><span class="mi">3</span><span class="err">cb</span><span class="mi">8</span><span class="err">ee</span><span class="mi">1</span><span class="w"> </span><span class="err">\</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">stitch='</span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="s2">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://yourserver.com/video1.mp4"</span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+       </span><span class="s2">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://yourserver.com/video2.mp4"</span><span class="p">,</span><span class="w"> 
+      </span><span class="s2">"start_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"120.0"</span><span class="p">,</span><span class="w"> 
+      </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"60.57"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="err">-d</span><span class="w"> </span><span class="err">profiles=</span><span class="mi">5</span><span class="err">a</span><span class="mi">2</span><span class="err">a</span><span class="mi">846</span><span class="err">a</span><span class="mi">26e88</span><span class="w">
+</span></code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"error"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"upload_url"</span><span class="p">:</span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">storage.qencode.com</span><span class="se">\/</span><span class="s2">v1</span><span class="se">\/</span><span class="s2">upload_file"</span><span class="p">,</span><span class="s2">"task_token"</span><span class="p">:</span><span class="s2">"471272a512d76c22665db9dcee893409"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apiadding_logo_watermark_to_output_video">
+						Adding logo/watermark
+						
+							<span class="endpoint GET"></span>
+						
+					</a>
+					<a class="editor-link" href="cloudcannon:collections/_api/adding_logo_watermark_to_output_video.md">Edit</a>
+				</h3>
+				
+
+				
+						<h6>Parameters</h6>
+						<dl>
+								
+										<dt>access token</dt>
+										<dd>your token</dd>
+								
+						</dl>
+				
+
+				<p>This route is for adding logo or watermark to output video.</p>
+
+<p class="info">An object describing logo / watermark should be inserted into “format” element:</p>
+
+
+				
+						
+								
+
+
+<div title="Example" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"format"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+ </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"output"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
+   </span><span class="err">...</span><span class="w">
+    </span><span class="s2">"logo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://yourserver.com/watermark.png"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+								
+						
+			</section>
+			
+					<section class="right-code">
+						
+								
+
+
+<div title="Response" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"error"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"upload_url"</span><span class="p">:</span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">storage.qencode.com</span><span class="se">\/</span><span class="s2">v1</span><span class="se">\/</span><span class="s2">upload_file"</span><span class="p">,</span><span class="s2">"task_token"</span><span class="p">:</span><span class="s2">"471272a512d76c22665db9dcee893409"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+								
+
+
+<div title="Error" class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+						
+				</section>
+			
+		</section>
+	
+
+
+		</div>
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>
