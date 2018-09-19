@@ -7,9 +7,14 @@ parameters:
 content_markdown: |-
   Welcome to our API.
 
-  This API document is designed for those interested in developing for our platform.
+  This API documentation is designed for those who interested in developing for our platform. 
 
-  This API is still under development and will evolve.
+  The documentation is still under development.
+
+  Please be aware that video URL should contain urlencoded value only. Unicode values are not accepted.
+  {: .info }
+
+  Check our info boxes below.
 
   You'll succeed if you do this.
   {: .success }
