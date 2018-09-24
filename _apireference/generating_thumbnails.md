@@ -1,6 +1,6 @@
 ---
 title: Generating Thumbnails
-position: 1.1
+position: 3.1
 type: GET
 description: 
 parameters:

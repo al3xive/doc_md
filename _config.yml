@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: Aviator
+title: Qencode
 description: Jekyll template for API documentation.
 url: https://example.com
 google_analytics_key:
@@ -13,12 +13,19 @@ permalink: pretty
 timezone: Etc/UTC
 
 collections:
-  documentation:
-    title: Documentation
+  overview:
+    title: Overview
     position: 1
-  api:
-    title: APIs
+  tutorials:
+    title: Tutorials
     position: 2
+  apireference:
+    title: API Reference
+    position: 3
+    output: false
+  apiclients:
+    title: API Clients
+    position: 4
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -35,12 +42,22 @@ defaults:
       layout: default
   -
     scope:
-      type: "documentation"
+      type: "overview"
     values:
       _hide_content: true
   -
     scope:
-      type: "api"
+      type: "tutorials"
+    values:
+      _hide_content: true
+  -
+    scope:
+      type: "apireference"
+    values:
+      _hide_content: true
+  -
+    scope:
+      type: "apiclients"
     values:
       _hide_content: true
 
@@ -55,7 +72,7 @@ types:
 
 languages:
   bash: Bash
-  c: C
+  c#: C#
   css: CSS
   html: HTML
   java: Java
@@ -64,6 +81,8 @@ languages:
   php: PHP
   python: Python
   ruby: Ruby
+  node: Node
+  .net: .NET
 
 _options:
   content_markdown:
